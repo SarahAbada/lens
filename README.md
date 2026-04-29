@@ -1,11 +1,10 @@
 
-Lens — What It Is and What Every Number Means
-The One-Liner
+# Lens — What It Is and What Every Number Means
 Lens is a transparency tool that answers: "Where is public money going, how concentrated is it in a few vendors, and should we be worried?"
 It pulls real federal grant data from the Government of Canada's open data API, loads it into a local PostgreSQL database, and gives you interactive analytics, AI-generated risk briefings, and cross-dataset entity lookups — all in a browser.
 
-The Sidebar (left panel)
-System Health Monitor
+## The Sidebar (left panel)
+### System Health Monitor
 Three status indicators that tell you whether you're looking at real data or demo data:
 Data Authenticity:
 🟢 LIVE DATA — The dashboard is connected to the local PostgreSQL database and/or S3 mount. The numbers you see are from real government datasets (CRA charity filings, federal grants, Alberta procurement). This is what you want.
@@ -18,7 +17,7 @@ LLM Provider:
 Filters
 Department and Spend Category dropdowns filter the Overview tab's data. "All" means no filter. When you select "Engineering" for example, every number on the Overview tab recalculates to show only Engineering's vendors and spend.
 
-Tab 1: 📊 Overview
+### Tab 1: 📊 Overview
 This is the core vendor concentration analysis. It answers: "If one of our big vendors disappeared tomorrow, how screwed are we?"
 The Four KPI Cards
 Total Spend — The sum of all contract dollar values in the current filter. If you're looking at "All" departments, this is the total across the entire dataset. The small number underneath is the count of individual contract line items.
@@ -64,7 +63,7 @@ A side-by-side bar chart comparing current vs. post-diversification spend per ve
 A detail table showing exactly how much money moves from which vendor to which
 This is a "what-if" tool. It doesn't change any data — it just shows the math of what diversification would look like.
 
-Tab 2: 🔎 Golden Record Dossier
+### Tab 2: 🔎 Golden Record Dossier
 This answers: "Tell me everything about this specific organization across every government dataset."
 You enter a Business Number (BN) — the 9-digit identifier that the Canada Revenue Agency assigns to every registered entity. The dashboard then searches two datasets simultaneously:
 CRA side (left card): Pulls from the CRA T3010 charity filings database. Shows the organization's legal name, charity category, designation (charitable organization vs. public foundation vs. private foundation), location, registration date, and which fiscal years they've filed returns for.
@@ -76,7 +75,7 @@ Risk Flags appear at the top if the data reveals concerns:
 🔴 Entity receives federal grants but has NO CRA charity registration (this is a red flag — who is this entity?)
 The power here is the cross-reference. CRA and FED are separate government systems that don't talk to each other. Lens joins them on the Business Number to build a unified picture.
 
-Tab 3: ☀️ Funding Sunburst
+### Tab 3: ☀️ Funding Sunburst
 A Plotly sunburst chart that visualizes the flow of federal money as concentric rings:
 Inner ring: Federal departments (e.g., "Agriculture and Agri-Food Canada")
 Middle ring: Grant type — G (Grant), C (Contribution), or O (Other transfer payment). These are legally distinct: a Grant has fewer conditions, a Contribution has performance requirements.
@@ -89,7 +88,7 @@ Departments — Count of distinct federal departments in the data
 Unique Recipients — Count of distinct recipient organizations
 This data comes from the live Open Canada API, fetched into your local PostgreSQL.
 
-Tab 4: 🤖 Strategic Analyst
+### Tab 4: 🤖 Strategic Analyst
 This takes the top high-risk vendors (those with ≥ 20% market share, or the top 5 if none hit 20%) and sends them to an LLM to generate Accountability Briefs — structured investigative memos.
 Each memo has three sections:
 Profile Summary — Who is this entity and why does it warrant scrutiny
@@ -97,7 +96,7 @@ Red Flags — Specific concentration risks, sole-source dependency, discrepancie
 Recommended Actions — Concrete next steps for investigation
 With LLM_PROVIDER=bedrock, this is a live Claude call. With LLM_PROVIDER=cohere, it uses Cohere Command R+. With placeholder, it returns a template.
 
-Tab 5: 🔒 Security Audit
+### Tab 5: 🔒 Security Audit
 A file scanner that checks the S3 mount and optionally the hackathon repo for security issues:
 Unencrypted private keys (.pem, .key, .pfx files)
 Credential files (.env, credentials.json, service-account.json)
@@ -127,5 +126,5 @@ Amazon Bedrock / Cohere / Gemini
 Live API calls using keys in .env
 
 
-The Pitch (30 seconds)
+### The Pitch (30 seconds)
 "Lens connects three disconnected government datasets — CRA charity filings, federal grants, and provincial procurement — into one dashboard. It calculates real concentration risk metrics used by antitrust regulators, lets you search any organization by Business Number to see every public dollar that flowed to them across jurisdictions, and uses AI to generate investigative risk briefings. The data is live from the Government of Canada's open data API. We built it in a weekend."
