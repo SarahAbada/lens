@@ -1,5 +1,6 @@
 
 # Lens — What It Is and What Every Number Means
+https://youtu.be/ExJLFCLqqps?si=ZGGaqGdLjOH2GlV-
 Lens is a transparency tool that answers: "Where is public money going, how concentrated is it in a few vendors, and should we be worried?"
 It pulls real federal grant data from the Government of Canada's open data API, loads it into a local PostgreSQL database, and gives you interactive analytics, AI-generated risk briefings, and cross-dataset entity lookups — all in a browser.
 
