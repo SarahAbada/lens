@@ -1,0 +1,43 @@
+department,vendor,spend_amount,category,contract_id
+Engineering,Acme Corp,450000,Software,C001
+Engineering,Acme Corp,320000,Software,C002
+Engineering,TechVision,180000,Software,C003
+Engineering,CloudBase,95000,Infrastructure,C004
+Engineering,DataSync,55000,Infrastructure,C005
+Engineering,MicroSoft,30000,Software,C006
+Procurement,Acme Corp,210000,Consulting,C007
+Procurement,GlobalSupply,380000,Logistics,C008
+Procurement,GlobalSupply,290000,Logistics,C009
+Procurement,FastTrack,120000,Logistics,C010
+Procurement,NovaTech,85000,Consulting,C011
+Procurement,SmallBiz Co,40000,Consulting,C012
+Finance,FinancePro,560000,Accounting,C013
+Finance,FinancePro,430000,Accounting,C014
+Finance,AuditCorp,150000,Accounting,C015
+Finance,TaxSolutions,90000,Accounting,C016
+Finance,SmallAudit,35000,Accounting,C017
+Finance,MicroFinance,25000,Accounting,C018
+HR,PeopleFirst,340000,Staffing,C019
+HR,PeopleFirst,280000,Staffing,C020
+HR,TalentHub,195000,Training,C021
+HR,RecruitPro,110000,Staffing,C022
+HR,LearnCo,75000,Training,C023
+HR,SmallStaff,45000,Staffing,C024
+Operations,LogiCorp,620000,Logistics,C025
+Operations,LogiCorp,410000,Logistics,C026
+Operations,SupplyChain Inc,230000,Logistics,C027
+Operations,FastMove,140000,Logistics,C028
+Operations,LocalVendor,60000,Logistics,C029
+Operations,MicroOps,30000,Logistics,C030
+IT,CloudBase,480000,Infrastructure,C031
+IT,CloudBase,350000,Infrastructure,C032
+IT,SecureNet,200000,Security,C033
+IT,DataSync,130000,Infrastructure,C034
+IT,CyberShield,80000,Security,C035
+IT,TinyTech,40000,Infrastructure,C036
+Legal,LawFirm Alpha,390000,Legal,C037
+Legal,LawFirm Alpha,310000,Legal,C038
+Legal,ComplianceCo,170000,Compliance,C039
+Legal,SmallLaw,95000,Legal,C040
+Legal,RegTech,55000,Compliance,C041
+Legal,MicroLegal,30000,Legal,C042
